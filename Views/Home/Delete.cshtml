@@ -1,0 +1,33 @@
+@model CollegApp.Models.Student
+@{
+    ViewData["Title"] = "Видалення студента";
+}
+
+<div class="text-center">
+    <div>
+        <dl class="dl-horizontal">
+            <dt>Фамілія</dt>
+            <dd>
+                @Html.DisplayFor(model => model.Uname)
+            </dd>
+
+            <dt>Імя</dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>Група</dt>
+            <dd>
+                @Html.DisplayFor(model => model.Group)
+            </dd>
+        </dl>
+    
+        <div>
+            <form asp-controller="Home" asp-action="Delete" method="post">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default" value="Удалить" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
