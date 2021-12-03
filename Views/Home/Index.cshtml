@@ -3,21 +3,6 @@
 }
 
 <div class="text-center">
-    <table>
-        <tr>
-            <td>Імя</td>
-            <td>Група</td>
-            <td></td>
-            <td></td>
-        </tr>
-        @foreach (var student in Model)
-            {
-            <tr>
-                <td><h3>@student.Uname @student.Name</h3></td>
-                <td>@student.Group</td>
-                <td><a href="~/Home/Delete/@student.Id">Удалити</a></td>
-                <td><a href="~/Home/Edit/@student.Id">Відредактувати</a></td>
-            </tr>
-        }
-    </table>
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
