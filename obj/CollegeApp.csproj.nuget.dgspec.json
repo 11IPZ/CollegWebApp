@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\CollegeApp\\CollegeApp.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\CollegApp\\CollegeApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\CollegeApp\\CollegeApp.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\CollegApp\\CollegeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\CollegeApp\\CollegeApp.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\CollegApp\\CollegeApp.csproj",
         "projectName": "CollegeApp",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\CollegeApp\\CollegeApp.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\CollegApp\\CollegeApp.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\CollegeApp\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\CollegApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,7 +38,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[3.1.4, )"
             }

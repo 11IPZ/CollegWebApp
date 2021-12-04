@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore.Sqlite;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 using CollegeApp.Models;
@@ -27,7 +29,9 @@ namespace CollegeApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connection = "Server=(localdb)\\mssqllocaldb;Database=rolesappdb;Trusted_Connection=True;";
+            // Server=(localdb)\\mssqllocaldb;Database=collegappdb;Trusted_Connection=True;MultipleActiveResultSets=true
+            // Data Source=MvcMovie.db
+            string connection = "Server=localhost\\;Database=master;Trusted_Connection=True;";
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
  
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

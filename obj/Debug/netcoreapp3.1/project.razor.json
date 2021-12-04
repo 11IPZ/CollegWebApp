@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\CollegeApp.csproj",
+  "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\CollegeApp.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,43 +14402,53 @@
   "RootNamespace": "CollegeApp",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\Account\\RegisterStudent.cshtml",
-      "TargetPath": "Views\\Account\\RegisterStudent.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegeApp\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Account\\RegisterStudent.cshtml",
+      "TargetPath": "Views\\Account\\RegisterStudent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Account\\RegisterAdmin.cshtml",
+      "TargetPath": "Views\\Account\\RegisterAdmin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\CollegApp\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     }
   ],
