@@ -19,8 +19,8 @@ namespace CollegeApp.Models
             string adminRoleName = "admin";
             string strudentRoleName = "student";
  
-            string adminEmail = "admin@gmail.com";
-            string adminPassword = "123456";
+            // string adminEmail = "admin@gmail.com";
+            // string adminPassword = "123456";
  
             // добавляем роли
             Role adminRole = new Role { Id = 1, Name = adminRoleName };

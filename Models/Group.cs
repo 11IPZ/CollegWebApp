@@ -9,6 +9,6 @@ namespace CollegeApp.Models
 
         [Required(ErrorMessage = "Не вказано імя групи")]
         public string NameGroup { get; set; }
-        public List<Student> Students { get; set; }
+        // public List<Student> Students { get; set; }
     }
 }

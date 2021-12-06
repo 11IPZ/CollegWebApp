@@ -163,3 +163,4 @@ C:\Users\ASUS\Desktop\CollegApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\
 C:\Users\ASUS\Desktop\CollegApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\ASUS\Desktop\CollegApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\ASUS\Desktop\CollegApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\ASUS\Desktop\CollegApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\CreateGroup.cshtml.g.cs

@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
- 
+using System.Linq;
+
 namespace CollegeApp.Controllers
 {
     public class AccountController : Controller
@@ -18,9 +19,14 @@ namespace CollegeApp.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<IActionResult> RegisterStudent()
+        public IActionResult RegisterStudent()
         {
-            ViewBag.Groups = await _context.Groups.ToListAsync();
+            List<string> gr = new List<string>();
+            foreach(Group item in _context.Groups.ToList())
+            {
+                gr.Add(item.NameGroup);
+            }
+            ViewBag.Groups = gr;
 
             return View();
         }
@@ -64,7 +70,7 @@ namespace CollegeApp.Controllers
             if (ModelState.IsValid)
             {
                 Student user = await _context.Students
-                    .Include(u => u.Role)
+                    // .Include(u => u.Role)
                     .FirstOrDefaultAsync(u => u.Email == model.Email && u.Password == model.Password);
                 if (user != null)
                 {
