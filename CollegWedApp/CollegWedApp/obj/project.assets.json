@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "CollegWebApp.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CollegWebApp.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CollegWebApp.DAL.dll": {}
+        }
+      },
+      "CollegWebApp.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CollegWebApp.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CollegWebApp.Service.dll": {}
+        }
+      },
+      "CollegWedApp.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CollegWedApp.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CollegWedApp.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CollegWebApp.DAL/1.0.0": {
+      "type": "project",
+      "path": "../CollegWedApp.DAL/CollegWebApp.DAL.csproj",
+      "msbuildProject": "../CollegWedApp.DAL/CollegWebApp.DAL.csproj"
+    },
+    "CollegWebApp.Service/1.0.0": {
+      "type": "project",
+      "path": "../CollegWebApp.Service/CollegWebApp.Service.csproj",
+      "msbuildProject": "../CollegWebApp.Service/CollegWebApp.Service.csproj"
+    },
+    "CollegWedApp.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CollegWedApp.Domain/CollegWedApp.Domain.csproj",
+      "msbuildProject": "../CollegWedApp.Domain/CollegWedApp.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "CollegWebApp.DAL >= 1.0.0",
+      "CollegWebApp.Service >= 1.0.0",
+      "CollegWedApp.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\CollegApp\\CollegWedApp\\CollegWedApp\\CollegWebApp.csproj",
+      "projectName": "CollegWebApp",
+      "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp\\CollegWebApp.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj": {
+              "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj"
+            },
+            "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj": {
+              "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj"
+            },
+            "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj": {
+              "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
