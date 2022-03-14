@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CollegWebApp.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CollegWebApp.DAL
 {
-    internal class CollegWebAppContext
+    public class CollegWebAppContext : DbContext
     {
+        public CollegWebAppContext(DbContextOptions<CollegWebAppContext> options)
+            : base(options)
+        {
+            Database.EnsureCreated();
+        }
+
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Profession> Professions { get; set;}
+        public DbSet<Group> Groups { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>()
+                .HasOne(a => a.Group)
+                .WithMany(b => b.Students)
+                .IsRequired();
+        }
     }
 }

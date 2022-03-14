@@ -81,7 +81,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj": {
+                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj"
+              },
+              "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
+                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -93,6 +100,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -112,12 +129,12 @@
         }
       }
     },
-    "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj": {
+    "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj",
-        "projectName": "CollegWedApp.Domain",
-        "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj",
+        "projectUniqueName": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj",
+        "projectName": "CollegWebApp.Domain",
+        "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
         "outputPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -196,8 +213,8 @@
               "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj": {
                 "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj"
               },
-              "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj": {
-                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj"
+              "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
+                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj"
               }
             }
           }

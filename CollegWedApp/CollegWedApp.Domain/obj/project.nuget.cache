@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hgH+Sd0KkdK1HHJLl4y215wJJ6wTE+R2S4kUvhNctLFwOWlMhSzDGlaA1sfg+qC2mRV1OWQhB7BIYcUGOG3+PA==",
+  "dgSpecHash": "hhMqLiIdXkW/dtvxkGJdUHE6AXgWLX02Zbf0QLUg0FAmIpFrZrNnUX7BrCcq7jJ52VEtmcJC0paVaOTMjTUnVA==",
   "success": true,
-  "projectFilePath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj",
+  "projectFilePath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

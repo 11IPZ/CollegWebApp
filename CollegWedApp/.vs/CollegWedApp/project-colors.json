@@ -3,7 +3,7 @@
   "ProjectMap": {
     "e0e847a1-08b1-4faf-a12f-6c584572d949": {
       "ProjectGuid": "e0e847a1-08b1-4faf-a12f-6c584572d949",
-      "DisplayName": "CollegWedApp",
+      "DisplayName": "CollegWebApp",
       "ColorIndex": 0
     },
     "27571a6c-b0a6-46c1-86ef-9d66c6fc488f": {
@@ -13,7 +13,7 @@
     },
     "844f1a17-a918-4f05-824f-fe38dc613325": {
       "ProjectGuid": "844f1a17-a918-4f05-824f-fe38dc613325",
-      "DisplayName": "CollegWedApp.DAL",
+      "DisplayName": "CollegWebApp.DAL",
       "ColorIndex": 2
     },
     "0e4ed43f-d0ee-4dbd-8cb6-fb4ff136a56e": {

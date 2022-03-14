@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebApp", "CollegWedApp\CollegWebApp.csproj", "{E0E847A1-08B1-4FAF-A12F-6C584572D949}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWedApp.Domain", "CollegWedApp.Domain\CollegWedApp.Domain.csproj", "{27571A6C-B0A6-46C1-86EF-9D66C6FC488F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebApp.Domain", "CollegWedApp.Domain\CollegWebApp.Domain.csproj", "{27571A6C-B0A6-46C1-86EF-9D66C6FC488F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebApp.DAL", "CollegWedApp.DAL\CollegWebApp.DAL.csproj", "{844F1A17-A918-4F05-824F-FE38DC613325}"
 EndProject

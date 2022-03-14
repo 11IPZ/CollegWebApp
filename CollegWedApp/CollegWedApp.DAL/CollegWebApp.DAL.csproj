@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositories\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CollegWebApp.Service\CollegWebApp.Service.csproj" />
+    <ProjectReference Include="..\CollegWedApp.Domain\CollegWebApp.Domain.csproj" />
   </ItemGroup>
 
 </Project>

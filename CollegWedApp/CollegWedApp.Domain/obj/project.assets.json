@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj",
-      "projectName": "CollegWedApp.Domain",
-      "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWedApp.Domain.csproj",
+      "projectUniqueName": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj",
+      "projectName": "CollegWebApp.Domain",
+      "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
       "outputPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\obj\\",
       "projectStyle": "PackageReference",
