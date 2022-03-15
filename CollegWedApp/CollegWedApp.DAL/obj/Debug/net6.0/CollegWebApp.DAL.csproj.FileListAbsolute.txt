@@ -1,0 +1,17 @@
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.DAL.deps.json
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.DAL.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\ref\CollegWebApp.DAL.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.DAL.pdb
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.Domain.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.Service.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.Service.pdb
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\bin\Debug\net6.0\CollegWebApp.Domain.pdb
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.AssemblyReference.cache
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.AssemblyInfoInputs.cache
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.AssemblyInfo.cs
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.CoreCompileInputs.cache
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.CopyComplete
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\ref\CollegWebApp.DAL.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.pdb

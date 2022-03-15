@@ -1,0 +1,12 @@
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.Service.deps.json
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.Service.dll
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\ref\CollegWebApp.Service.dll
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.Service.pdb
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.csproj.AssemblyReference.cache
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.AssemblyInfoInputs.cache
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.AssemblyInfo.cs
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.csproj.CoreCompileInputs.cache
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.dll
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\ref\CollegWebApp.Service.dll
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.pdb

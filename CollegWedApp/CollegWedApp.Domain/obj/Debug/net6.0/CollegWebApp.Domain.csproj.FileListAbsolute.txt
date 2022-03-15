@@ -1,0 +1,12 @@
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\bin\Debug\net6.0\CollegWebApp.Domain.deps.json
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\bin\Debug\net6.0\CollegWebApp.Domain.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\bin\Debug\net6.0\ref\CollegWebApp.Domain.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\bin\Debug\net6.0\CollegWebApp.Domain.pdb
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.csproj.AssemblyReference.cache
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.AssemblyInfoInputs.cache
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.AssemblyInfo.cs
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.csproj.CoreCompileInputs.cache
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\ref\CollegWebApp.Domain.dll
+D:\CollegApp\CollegWedApp\CollegWedApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.pdb
