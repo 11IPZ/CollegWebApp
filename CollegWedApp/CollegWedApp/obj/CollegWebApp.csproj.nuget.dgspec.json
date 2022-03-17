@@ -27,7 +27,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj": {
+                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj"
+              },
+              "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
+                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -82,9 +89,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj": {
-                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj"
-              },
               "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
                 "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj"
               }
@@ -209,9 +213,6 @@
             "projectReferences": {
               "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj": {
                 "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj"
-              },
-              "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj": {
-                "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj"
               },
               "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
                 "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj"

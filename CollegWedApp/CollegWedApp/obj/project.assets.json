@@ -600,7 +600,6 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "CollegWebApp.Domain": "1.0.0",
-          "CollegWebApp.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3"
         },
@@ -624,6 +623,10 @@
       "CollegWebApp.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CollegWebApp.DAL": "1.0.0",
+          "CollegWebApp.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CollegWebApp.Service.dll": {}
         },
@@ -1813,7 +1816,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CollegWebApp.DAL >= 1.0.0",
       "CollegWebApp.Domain >= 1.0.0",
       "CollegWebApp.Service >= 1.0.0"
     ]
@@ -1847,9 +1849,6 @@
           "projectReferences": {
             "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj": {
               "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWebApp.Service\\CollegWebApp.Service.csproj"
-            },
-            "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj": {
-              "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.DAL\\CollegWebApp.DAL.csproj"
             },
             "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj": {
               "projectPath": "D:\\CollegApp\\CollegWedApp\\CollegWedApp.Domain\\CollegWebApp.Domain.csproj"

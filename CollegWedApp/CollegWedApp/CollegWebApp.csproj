@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CollegWebApp.Service\CollegWebApp.Service.csproj" />
-    <ProjectReference Include="..\CollegWedApp.DAL\CollegWebApp.DAL.csproj" />
     <ProjectReference Include="..\CollegWedApp.Domain\CollegWebApp.Domain.csproj" />
   </ItemGroup>
 

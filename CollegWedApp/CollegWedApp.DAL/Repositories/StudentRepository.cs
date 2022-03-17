@@ -1,10 +1,17 @@
 ﻿using CollegWebApp.DAL.Interfaces;
 using CollegWebApp.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CollegWebApp.DAL.Repositories
 {
     public class StudentRepository : IStudentRepository
     {
+        private readonly CollegWebAppContext context;
+        public StudentRepository(CollegWebAppContext _context)
+        {
+            context = _context;
+        }
+
         public bool Create(Student entity)
         {
             throw new NotImplementedException();
@@ -30,9 +37,9 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public Student GetById(int id)
+        public Task<Student> GetById(int id)
         {
-            throw new NotImplementedException();
+            return context.Students.FirstOrDefaultAsync(i => i.Id == id);
         }
 
         public Student GetByName(string name)

@@ -8,7 +8,7 @@ namespace CollegWebApp.DAL
         public CollegWebAppContext(DbContextOptions<CollegWebAppContext> options)
             : base(options)
         {
-            //Database.EnsureCreated();
+            Database.EnsureCreated();
         }
 
         public DbSet<Student> Students { get; set; }
