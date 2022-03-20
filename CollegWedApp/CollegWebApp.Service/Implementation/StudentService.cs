@@ -1,15 +1,15 @@
-﻿using CollegWebApp.DAL.Repositories;
-using CollegWebApp.Domain.Models;
+﻿using CollegWebApp.Domain.Models;
 using CollegWebApp.Domain.Enums;
 using CollegWebApp.Domain.Response;
 using CollegWebApp.Service.Interfaces;
+using CollegWebApp.DAL.Interfaces;
 
 namespace CollegWebApp.Service.Implementation
 {
     public class StudentService : IStudentService
     {
-        private readonly StudentRepository studentRepository;
-        public StudentService(StudentRepository _studentRepository)
+        private readonly IStudentRepository studentRepository;
+        public StudentService(IStudentRepository _studentRepository)
         {
             studentRepository = _studentRepository;
         }
