@@ -15,7 +15,7 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public Profession GetById(int id)
+        public Task<Profession> GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -25,7 +25,7 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Update(int id)
+        public bool Update(Profession entity)
         {
             throw new NotImplementedException();
         }

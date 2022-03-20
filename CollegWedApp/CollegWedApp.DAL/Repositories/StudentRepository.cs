@@ -14,12 +14,36 @@ namespace CollegWebApp.DAL.Repositories
 
         public bool Create(Student entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                context.Students.Add(entity);
+                context.SaveChanges();
+                return true;
+            }catch (Exception ex)
+            {
+                return false;
+            }
+            
         }
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var student = context.Students.FirstOrDefaultAsync(x => x.Id == id);
+
+                if (student == null)
+                {
+                    context.Remove(student);
+                    context.SaveChanges();
+                    return true;
+                }
+
+                return false;
+            }catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public IEnumerable<Student> GetByCours(int course)
@@ -47,7 +71,7 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Update(int id)
+        public bool Update(Student entity)
         {
             throw new NotImplementedException();
         }

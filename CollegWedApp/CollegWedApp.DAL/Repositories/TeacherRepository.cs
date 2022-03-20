@@ -5,6 +5,10 @@ namespace CollegWebApp.DAL.Repositories
 {
     public class TeacherRepository : ITeacherRepository
     {
+        public TeacherRepository()
+        {
+        }
+
         public bool Create(Teacher entity)
         {
             throw new NotImplementedException();
@@ -20,7 +24,7 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public Teacher GetById(int id)
+        public Task<Teacher> GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -35,7 +39,7 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Update(int id)
+        public bool Update(Teacher entity)
         {
             throw new NotImplementedException();
         }

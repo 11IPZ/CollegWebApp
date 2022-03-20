@@ -8,7 +8,7 @@ namespace CollegWebApp.DAL
         public CollegWebAppContext(DbContextOptions<CollegWebAppContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         public DbSet<Student> Students { get; set; }
@@ -22,9 +22,6 @@ namespace CollegWebApp.DAL
                 .HasOne(a => a.Group)
                 .WithMany(b => b.Students);
 
-            modelBuilder.Entity<Teacher>()
-                .HasMany(t => t.Groups)
-                .WithMany(t => t.Teachers);
 
             modelBuilder.Entity<Profession>()
                 .HasMany(p => p.Groups);
