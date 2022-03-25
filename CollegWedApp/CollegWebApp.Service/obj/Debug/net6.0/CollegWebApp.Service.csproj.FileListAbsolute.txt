@@ -10,3 +10,8 @@ D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Ser
 D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.dll
 D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\ref\CollegWebApp.Service.dll
 D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.pdb
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.DAL.dll
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.Domain.dll
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.DAL.pdb
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\bin\Debug\net6.0\CollegWebApp.Domain.pdb
+D:\CollegApp\CollegWedApp\CollegWebApp.Service\obj\Debug\net6.0\CollegWebApp.Service.csproj.CopyComplete

@@ -5,9 +5,31 @@ namespace CollegWebApp.DAL.Repositories
 {
     public class GroupRepository : IGroupRepository
     {
+        private readonly CollegWebAppContext context;
+        public GroupRepository(CollegWebAppContext _context)
+        {
+            context = _context;
+        }
+
         public bool Create(Group entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (entity is null)
+                {
+                    return false;
+                }
+                else
+                {
+                    context.Groups.Add(entity);
+                    context.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public bool Delete(int id)
@@ -17,10 +39,18 @@ namespace CollegWebApp.DAL.Repositories
 
         public IEnumerable<Group> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var groups = context.Groups.ToList();
+                return groups;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
-        public Group GetById(int id)
+        public Task<Group> GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -40,9 +70,11 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Update(int id)
+
+        public bool Update(Group entity)
         {
             throw new NotImplementedException();
         }
+        
     }
 }

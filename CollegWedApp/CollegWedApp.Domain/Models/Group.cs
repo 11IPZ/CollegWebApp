@@ -7,9 +7,9 @@ namespace CollegWebApp.Domain.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual Profession Profession { get; set; }
-        public virtual ICollection<Student> Students { get; set; }
-        public virtual ICollection<Teacher> Teachers { get; set; }
-        public DateTime DateCreate { get; set; }
+        public virtual Profession? Profession { get; set; }
+        public virtual ICollection<Student>? Students { get; set; }
+        public virtual ICollection<Teacher>? Teachers { get; set; }
+        public DateTime? DateCreate { get; set; }
     }
 }

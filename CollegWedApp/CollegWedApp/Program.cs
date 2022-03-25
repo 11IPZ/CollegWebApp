@@ -1,4 +1,6 @@
 using CollegWebApp.DAL;
+using CollegWebApp.DAL.Interfaces;
+using CollegWebApp.DAL.Repositories;
 using CollegWebApp.Service.Implementation;
 using CollegWebApp.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,11 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<CollegWebAppContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddTransient<IGroupRepository, GroupRepository>();
+builder.Services.AddTransient<IStudentRepository, StudentRepository>();
+
+builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 
 var app = builder.Build();
@@ -32,6 +39,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Group}/{action=Index}/{id?}");
 
 app.Run();

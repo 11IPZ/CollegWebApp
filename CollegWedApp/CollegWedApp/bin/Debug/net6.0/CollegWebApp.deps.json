@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v6.0": {
       "CollegWebApp/1.0.0": {
         "dependencies": {
-          "CollegWebApp.DAL": "1.0.0",
           "CollegWebApp.Domain": "1.0.0",
           "CollegWebApp.Service": "1.0.0"
         },
@@ -411,7 +410,6 @@
       "CollegWebApp.DAL/1.0.0": {
         "dependencies": {
           "CollegWebApp.Domain": "1.0.0",
-          "CollegWebApp.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3"
         },
@@ -425,6 +423,10 @@
         }
       },
       "CollegWebApp.Service/1.0.0": {
+        "dependencies": {
+          "CollegWebApp.DAL": "1.0.0",
+          "CollegWebApp.Domain": "1.0.0"
+        },
         "runtime": {
           "CollegWebApp.Service.dll": {}
         }

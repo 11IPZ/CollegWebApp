@@ -1,32 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CollegWebApp.Domain.Models;
-using CollegWebApp.Domain.Response;
-using CollegWebApp.DAL;
 using CollegWebApp.Service.Interfaces;
-using CollegWebApp.Domain.Response;
 
 namespace CollegWebApp.Controllers
 {
     public class StudentController : Controller
     {
-        private IStudentService studentService;
+        private readonly IStudentService studentService;
+        private readonly IGroupService groupService;
 
-        public StudentController(IStudentService _studentService)
+        public StudentController(IStudentService _studentService,
+                                IGroupService _groupService)
         {
             studentService = _studentService;
-            studentService.Create(new Student()
-            {
-                Name = "Oleh",
-                Surname = "Markelov",
-                MiddleName = "Volodumurovuch",
-                DateBorn = DateTime.Now,
-            });
+            groupService = _groupService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var studentResponse = await studentService.GetById(0);
-            return View(studentResponse);
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            ViewBag.Groups = groupService.GetAll();
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Student student)
+        {
+            await studentService.Create(student);
+            return View();
         }
     }
 }

@@ -9,7 +9,6 @@
       "CollegWebApp.DAL/1.0.0": {
         "dependencies": {
           "CollegWebApp.Domain": "1.0.0",
-          "CollegWebApp.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3"
         },
@@ -463,11 +462,6 @@
         "runtime": {
           "CollegWebApp.Domain.dll": {}
         }
-      },
-      "CollegWebApp.Service/1.0.0": {
-        "runtime": {
-          "CollegWebApp.Service.dll": {}
-        }
       }
     }
   },
@@ -758,11 +752,6 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "CollegWebApp.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CollegWebApp.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
