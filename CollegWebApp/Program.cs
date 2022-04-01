@@ -1,7 +1,21 @@
+using CollegWebApp.DAL;
+using CollegWebApp.DAL.Interfaces;
+using CollegWebApp.DAL.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<CollegWebAppContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+/*builder.Services.AddTransient<IGroupRepository, GroupRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+
+builder.Services.AddScoped<IGroupService, GroupService>();
+builder.Services.AddScoped<IUserService, UserService>();*/
 
 var app = builder.Build();
 

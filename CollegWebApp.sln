@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegWebApp", "CollegWebApp\CollegWebApp.csproj", "{9EB93BD7-60E1-4132-9D76-323864341CE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebApp", "CollegWebApp\CollegWebApp.csproj", "{9EB93BD7-60E1-4132-9D76-323864341CE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegWebApp.Domain", "CollegWebApp.Domain\CollegWebApp.Domain.csproj", "{E6A57B92-E06A-4809-BCFC-08EEB3FBFA80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegWebApp.DAL", "CollegWebApp.DAL\CollegWebApp.DAL.csproj", "{D9664B20-19F0-4ACA-B847-C807D5D5CB03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegWebAdd.Service", "CollegWebAdd.Service\CollegWebAdd.Service.csproj", "{22A4D290-13AA-4C70-92D7-42F2E92EDAF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{9EB93BD7-60E1-4132-9D76-323864341CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB93BD7-60E1-4132-9D76-323864341CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EB93BD7-60E1-4132-9D76-323864341CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A57B92-E06A-4809-BCFC-08EEB3FBFA80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A57B92-E06A-4809-BCFC-08EEB3FBFA80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A57B92-E06A-4809-BCFC-08EEB3FBFA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A57B92-E06A-4809-BCFC-08EEB3FBFA80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A4D290-13AA-4C70-92D7-42F2E92EDAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A4D290-13AA-4C70-92D7-42F2E92EDAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A4D290-13AA-4C70-92D7-42F2E92EDAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A4D290-13AA-4C70-92D7-42F2E92EDAF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
