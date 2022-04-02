@@ -2,10 +2,10 @@
 {
     public interface IBaseRepository<T>
     {
-        bool Create(T entity);
-        bool Update(T entity);
+        Task<bool> CreateAsync(T entity);
+        Task<bool> Update(T entity);
         Task<T> GetById(int id);
-        T GetByName(string name);
-        bool Delete(int id);
+        Task<T> GetByName(string name);
+        Task<bool> Delete(int id);
     }
 }

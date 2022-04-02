@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e6a57b92-e06a-4809-bcfc-08eeb3fbfa80": {
+      "ProjectGuid": "e6a57b92-e06a-4809-bcfc-08eeb3fbfa80",
+      "DisplayName": "CollegWebApp.Domain",
+      "ColorIndex": 0
+    },
+    "d9664b20-19f0-4aca-b847-c807d5d5cb03": {
+      "ProjectGuid": "d9664b20-19f0-4aca-b847-c807d5d5cb03",
+      "DisplayName": "CollegWebApp.DAL",
+      "ColorIndex": 1
+    },
+    "22a4d290-13aa-4c70-92d7-42f2e92edaf0": {
+      "ProjectGuid": "22a4d290-13aa-4c70-92d7-42f2e92edaf0",
+      "DisplayName": "CollegWebAdd.Service",
+      "ColorIndex": 2
+    },
+    "9eb93bd7-60e1-4132-9d76-323864341ce3": {
+      "ProjectGuid": "9eb93bd7-60e1-4132-9d76-323864341ce3",
+      "DisplayName": "CollegWebApp",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

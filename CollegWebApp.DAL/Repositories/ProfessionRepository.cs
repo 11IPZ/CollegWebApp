@@ -1,5 +1,6 @@
 ﻿using CollegWebApp.DAL.Interfaces;
 using CollegWebApp.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CollegWebApp.DAL.Repositories
 {
@@ -10,29 +11,115 @@ namespace CollegWebApp.DAL.Repositories
         {
             _appContext = appContext;
         }
-        public bool Create(Profession entity)
+        public async Task<bool> CreateAsync(Profession entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _appContext.Professions.AddAsync(entity);
+
+                if (await _appContext.SaveChangesAsync() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using(var ap = _appContext)
+                {
+                    var profession = new Profession { Id = id };
+                    ap.Professions.Attach(profession);
+                    ap.Professions.Remove(profession);
+
+                    if (await ap.SaveChangesAsync() > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Task<Profession> GetById(int id)
+        public async Task<Profession> GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var profession = await _appContext.Professions.FirstOrDefaultAsync(p => p.Id == id);
+
+                if (profession == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return profession;
+                }
+            }catch (Exception)
+            {
+                return null;
+            }
         }
 
-        public Profession GetByName(string name)
+        public async Task<Profession> GetByName(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Profession profession = await _appContext.Professions.FirstOrDefaultAsync(p => p.Name == name);
+
+                if (profession == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return profession;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
-        public bool Update(Profession entity)
+        public async Task<bool> Update(Profession entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _appContext.Entry(await _appContext.Professions.FirstOrDefaultAsync(x => x.Id == entity.Id))
+                    .CurrentValues
+                    .SetValues(entity);
+
+                if (await _appContext.SaveChangesAsync() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

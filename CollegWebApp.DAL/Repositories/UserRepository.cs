@@ -11,12 +11,12 @@ namespace CollegWebApp.DAL.Repositories
             _appContext = appContext;
         }
 
-        public bool Create(User entity)
+        public async Task<bool> CreateAsync(User entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool Delete(int id)
+        public Task<bool> Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -26,12 +26,12 @@ namespace CollegWebApp.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public User GetByName(string name)
+        public Task<User> GetByName(string name)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(User entity)
+        public Task<bool> Update(User entity)
         {
             throw new NotImplementedException();
         }

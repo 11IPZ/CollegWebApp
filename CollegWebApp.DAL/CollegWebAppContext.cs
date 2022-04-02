@@ -14,6 +14,7 @@ namespace CollegWebApp.DAL
 
         public DbSet<Group> Groups { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<Profession> Professions { get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

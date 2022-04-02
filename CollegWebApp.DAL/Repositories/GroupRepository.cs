@@ -1,5 +1,6 @@
 ﻿using CollegWebApp.DAL.Interfaces;
 using CollegWebApp.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CollegWebApp.DAL.Repositories
 {
@@ -10,29 +11,116 @@ namespace CollegWebApp.DAL.Repositories
         {
             _appContext = appContext;
         }
-        public bool Create(Group entity)
+        public async Task<bool> CreateAsync(Group entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _appContext.Groups.AddAsync(entity);
+
+                if (await _appContext.SaveChangesAsync() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var ap = _appContext)
+                {
+                    var group = new Group { Id = id };
+                    ap.Groups.Attach(group);
+                    ap.Groups.Remove(group);
+
+                    if (await ap.SaveChangesAsync() > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Task<Group> GetById(int id)
+        public async Task<Group> GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var group = await _appContext.Groups.FirstOrDefaultAsync(p => p.Id == id);
+
+                if (group == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return group;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
-        public Group GetByName(string name)
+        public async Task<Group> GetByName(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Group group = await _appContext.Groups.FirstOrDefaultAsync(p => p.Name == name);
+
+                if (group == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return group;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
-        public bool Update(Group entity)
+        public async Task<bool> Update(Group entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _appContext.Entry(await _appContext.Groups.FirstOrDefaultAsync(x => x.Id == entity.Id))
+                    .CurrentValues
+                    .SetValues(entity);
+
+                if (await _appContext.SaveChangesAsync() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
