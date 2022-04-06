@@ -58,6 +58,19 @@ namespace CollegWebApp.DAL.Repositories
             }
         }
 
+        public async Task<List<Group>> GetAll()
+        {
+            try
+            {
+                List<Group> groups = await _appContext.Groups.ToListAsync();
+                return groups;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public async Task<Group> GetById(int id)
         {
             try

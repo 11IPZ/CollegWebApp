@@ -9,3 +9,4 @@ D:\CollegApp\CollegWebAdd.Service\obj\Debug\net6.0\CollegWebAdd.Service.csproj.C
 D:\CollegApp\CollegWebAdd.Service\obj\Debug\net6.0\CollegWebAdd.Service.dll
 D:\CollegApp\CollegWebAdd.Service\obj\Debug\net6.0\ref\CollegWebAdd.Service.dll
 D:\CollegApp\CollegWebAdd.Service\obj\Debug\net6.0\CollegWebAdd.Service.pdb
+D:\CollegApp\CollegWebAdd.Service\obj\Debug\net6.0\CollegWebAdd.Service.csproj.AssemblyReference.cache

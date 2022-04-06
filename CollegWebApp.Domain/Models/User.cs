@@ -21,13 +21,13 @@ namespace CollegWebApp.Domain.Models
         public virtual Group UserGroup { get; set; }
 
 
-        public List<IdentityRole> AllRoles { get; set; }
+        /*public List<IdentityRole> AllRoles { get; set; }
         public IList<string> UserRoles { get; set; }
         public User()
         {
             AllRoles = new List<IdentityRole>();
             UserRoles = new List<string>();
-        }
+        }*/
 
     }
 }

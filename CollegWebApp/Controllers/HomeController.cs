@@ -1,4 +1,5 @@
-﻿using CollegWebApp.Models;
+﻿using CollegWebApp.DAL.Interfaces;
+using CollegWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,13 +9,16 @@ namespace CollegWebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public readonly IGroupRepository _groupRepository;
+        public HomeController(ILogger<HomeController> logger, IGroupRepository groupRepository)
         {
             _logger = logger;
+            _groupRepository = groupRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
+            //await _groupRepository.CreateAsync(new Domain.Models.Group { Name = "11IPZ" });
             return View();
         }
 

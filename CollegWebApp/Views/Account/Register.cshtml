@@ -1,0 +1,49 @@
+﻿@model CollegWebApp.Domain.ViewModels.RegisterViewModel
+
+<h2>Регестрація</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="UserName"></label><br />
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label asp-for="UserSurname"></label><br />
+        <input asp-for="UserSurname" />
+        <span asp-validation-for="UserSurname"></span>
+    </div>
+    <div>
+        <label asp-for="UserMiddleName"></label><br />
+        <input asp-for="UserMiddleName" />
+        <span asp-validation-for="UserMiddleName"></span>
+    </div>
+    <div>
+        <label asp-for="UserDataOfBirth"></label><br />
+        <input asp-for="UserDataOfBirth" asp-format="{0:yyyy-MM-ddTHH:mm}" />
+        <span asp-validation-for="UserDataOfBirth"></span>
+    </div>
+    <div>
+        <label asp-for="UserGroupId"></label><br />
+        <select id="Id" name="Name" asp-items="ViewBag.Groups"></select>
+        <span asp-validation-for="UserGroupId"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="PasswordConfirm"></label><br />
+        <input asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <div>
+        <input type="submit" value="Регестрація" />
+    </div>
+</form>
