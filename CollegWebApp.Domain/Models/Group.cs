@@ -7,7 +7,7 @@ namespace CollegWebApp.Domain.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<User>? Users { get; set; }
-        public virtual ICollection<Lesson>? GroupLessons { get; set; }
+        /*public virtual ICollection<User>? Users { get; set; }
+        public virtual ICollection<Lesson>? GroupLessons { get; set; }*/
     }
 }

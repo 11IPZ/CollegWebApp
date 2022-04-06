@@ -7,9 +7,6 @@ namespace CollegWebApp.Domain.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Ім'я не може бути більше 50 символів.")]
-        [StringLength(50)]
-        public string UserName { get; set; }
         [Required(ErrorMessage = "Прізвище не може бути більше 50 символів.")]
         [StringLength(50)]
         public string UserSurname { get; set; }
@@ -17,7 +14,7 @@ namespace CollegWebApp.Domain.Models
         [StringLength(50)]
         public string UserMiddleName { get; set; }
         [DataType(DataType.Date)]
-        public DataType UserDataOfBirth { get; set; }
+        public DateTime UserDataOfBirth { get; set; }
         public virtual Group UserGroup { get; set; }
 
 

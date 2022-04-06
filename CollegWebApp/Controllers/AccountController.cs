@@ -19,8 +19,44 @@ namespace CollegWebApp.Controllers
             _signInManager = signInManager;
             _groupRepository = groupRepository;
         }
+
+        [HttpGet]
+        public IActionResult Login(string returnUrl = null)
+        {
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result =
+                    await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    // провіляєм,чи належить URL додатку
+                    if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
+                    {
+                        return Redirect(model.ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Неправильний логін і (або) пароль");
+                }
+            }
+            return View(model);
+        }
+
         [HttpGet]
         public async Task<IActionResult> Register()
+
         {
             ViewBag.Groups = new SelectList(await _groupRepository.GetAll(), "Id", "Name");
 
@@ -31,18 +67,20 @@ namespace CollegWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                Group selectGroup = await _groupRepository.GetById(model.UserGroupId);
+                Group selectGroup = await _groupRepository.GetById(model.UserGroupId + 1);
 
-                User user = new User { 
+                User user = new User
+                {
                     Email = model.Email,
                     UserName = model.UserName,
                     UserSurname = model.UserSurname,
                     UserMiddleName = model.UserMiddleName,
                     UserGroup = selectGroup,
-                    UserDataOfBirth = model.UserDataOfBirth, };
+                    UserDataOfBirth = model.UserDataOfBirth,
+                };
 
                 // добавляєм користувача 
-                var result = await _userManager.CreateAsync(user, model.Password);
+                var result = await _userManager.CreateAsync(user, model.Password.ToString());
                 if (result.Succeeded)
                 {
                     // встановляємо кукі
@@ -58,6 +96,15 @@ namespace CollegWebApp.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            // видаляєм аутентифікаційні кукі
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

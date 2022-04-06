@@ -25,7 +25,7 @@ namespace CollegWebApp.Domain.ViewModels
 
         [Required]
         [Display(Name = "Дата народження")]
-        public DataType UserDataOfBirth { get; set; }
+        public DateTime UserDataOfBirth { get; set; }
 
         [Required]
         [Display(Name = "Група")]

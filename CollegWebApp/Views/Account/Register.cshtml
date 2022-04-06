@@ -5,27 +5,27 @@
     <div asp-validation-summary="ModelOnly"></div>
     <div>
         <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
+        <input type="text" asp-for="Email" />
         <span asp-validation-for="Email"></span>
     </div>
     <div>
         <label asp-for="UserName"></label><br />
-        <input asp-for="UserName" />
+        <input type="text" asp-for="UserName" />
         <span asp-validation-for="UserName"></span>
     </div>
     <div>
         <label asp-for="UserSurname"></label><br />
-        <input asp-for="UserSurname" />
+        <input type="text" asp-for="UserSurname" />
         <span asp-validation-for="UserSurname"></span>
     </div>
     <div>
         <label asp-for="UserMiddleName"></label><br />
-        <input asp-for="UserMiddleName" />
+        <input type="text" asp-for="UserMiddleName" />
         <span asp-validation-for="UserMiddleName"></span>
     </div>
     <div>
         <label asp-for="UserDataOfBirth"></label><br />
-        <input asp-for="UserDataOfBirth" asp-format="{0:yyyy-MM-ddTHH:mm}" />
+        <input asp-for="UserDataOfBirth" type="date" asp-format="{0:yyyy-MM}" />
         <span asp-validation-for="UserDataOfBirth"></span>
     </div>
     <div>

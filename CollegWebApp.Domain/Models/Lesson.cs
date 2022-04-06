@@ -14,7 +14,7 @@ namespace CollegWebApp.Domain.Models
         [DataType(DataType.DateTime)]
         public DateTime DateTimeCreate { get; set; }
         public virtual User Creator { get; set; }
-        public virtual ICollection<Group> Groups { get; set; }
+        public virtual ICollection<Group>? Groups { get; set; }
 
     }
 }

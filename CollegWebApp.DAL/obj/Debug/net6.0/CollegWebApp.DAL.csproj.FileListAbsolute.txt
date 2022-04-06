@@ -13,3 +13,18 @@ D:\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.CopyCompl
 D:\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.dll
 D:\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\ref\CollegWebApp.DAL.dll
 D:\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.pdb
+D:\Нова папка\CollegApp\CollegWebApp.DAL\bin\Debug\net6.0\CollegWebApp.DAL.deps.json
+D:\Нова папка\CollegApp\CollegWebApp.DAL\bin\Debug\net6.0\CollegWebApp.DAL.dll
+D:\Нова папка\CollegApp\CollegWebApp.DAL\bin\Debug\net6.0\ref\CollegWebApp.DAL.dll
+D:\Нова папка\CollegApp\CollegWebApp.DAL\bin\Debug\net6.0\CollegWebApp.DAL.pdb
+D:\Нова папка\CollegApp\CollegWebApp.DAL\bin\Debug\net6.0\CollegWebApp.Domain.dll
+D:\Нова папка\CollegApp\CollegWebApp.DAL\bin\Debug\net6.0\CollegWebApp.Domain.pdb
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.AssemblyReference.cache
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.AssemblyInfoInputs.cache
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.AssemblyInfo.cs
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.CoreCompileInputs.cache
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.csproj.CopyComplete
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.dll
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\ref\CollegWebApp.DAL.dll
+D:\Нова папка\CollegApp\CollegWebApp.DAL\obj\Debug\net6.0\CollegWebApp.DAL.pdb
