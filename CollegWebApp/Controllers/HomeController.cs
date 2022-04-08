@@ -16,7 +16,7 @@ namespace CollegWebApp.Controllers
             _groupRepository = groupRepository;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             //await _groupRepository.CreateAsync(new Domain.Models.Group { Name = "11IPZ" });
             return View();

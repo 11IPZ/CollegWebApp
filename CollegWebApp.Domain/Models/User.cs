@@ -5,8 +5,9 @@ namespace CollegWebApp.Domain.Models
 {
     public class User : IdentityUser
     {
-        [Key]
-        public int Id { get; set; }
+        [Required(ErrorMessage = "Імя не може бути більше 50 символів.")]
+        [StringLength(50)]
+        public string Name { get; set; }
         [Required(ErrorMessage = "Прізвище не може бути більше 50 символів.")]
         [StringLength(50)]
         public string UserSurname { get; set; }

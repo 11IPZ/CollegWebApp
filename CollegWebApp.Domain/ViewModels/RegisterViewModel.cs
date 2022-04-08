@@ -11,7 +11,7 @@ namespace CollegWebApp.Domain.ViewModels
         [Required]
         [Display(Name = "Імя")]
         [StringLength(50)]
-        public string UserName { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [Display(Name = "Прізвище")]

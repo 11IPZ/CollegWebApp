@@ -27,6 +27,36 @@
                         </li>
                     </ul>
                 </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex align-content-end">
+                    @if(User.Identity.IsAuthenticated){
+                        <div class="navbar-collapse collapse d-sm-inline-flex align-content-end">
+                            <ul class="navbar-nav flex-grow-1 align-content-end">
+                                <li class="nav-item">
+                                    <p>@User.Identity.Name</p>
+                                </li>
+
+                                <li class="nav-item">
+                                    <form method="post" asp-controller="Account" asp-action="Logout">
+                                        <input type="submit" value="Вихід" />
+                                    </form>
+                                </li>
+                            </ul
+                        <div>
+                    }
+                    else
+                    {
+                        <div class="navbar-collapse collapse d-sm-inline-flex align-content-end">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Вхід</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Регестрація</a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                </div>
             </div>
         </nav>
     </header>

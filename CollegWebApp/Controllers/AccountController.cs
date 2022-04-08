@@ -30,7 +30,7 @@ namespace CollegWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 var result =
                     await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
@@ -72,7 +72,8 @@ namespace CollegWebApp.Controllers
                 User user = new User
                 {
                     Email = model.Email,
-                    UserName = model.UserName,
+                    UserName = model.Email,
+                    Name = model.Name,
                     UserSurname = model.UserSurname,
                     UserMiddleName = model.UserMiddleName,
                     UserGroup = selectGroup,

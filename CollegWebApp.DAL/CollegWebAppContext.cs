@@ -19,13 +19,13 @@ namespace CollegWebApp.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            /*modelBuilder.Entity<User>()
+            modelBuilder.Entity<User>()
                 .HasOne(a => a.UserGroup)
                 .WithMany(b => b.Users);
 
             modelBuilder.Entity<Lesson>()
                 .HasMany(a => a.Groups)
-                .WithMany(b => b.GroupLessons);*/
+                .WithMany(b => b.GroupLessons);
         }
     }
 }
