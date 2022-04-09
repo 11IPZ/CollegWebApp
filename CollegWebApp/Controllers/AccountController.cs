@@ -67,8 +67,6 @@ namespace CollegWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                Group selectGroup = await _groupRepository.GetById(model.UserGroupId + 1);
-
                 User user = new User
                 {
                     Email = model.Email,
@@ -76,7 +74,7 @@ namespace CollegWebApp.Controllers
                     Name = model.Name,
                     UserSurname = model.UserSurname,
                     UserMiddleName = model.UserMiddleName,
-                    UserGroup = selectGroup,
+                    UserGroupId = model.UserGroupId,
                     UserDataOfBirth = model.UserDataOfBirth,
                 };
 

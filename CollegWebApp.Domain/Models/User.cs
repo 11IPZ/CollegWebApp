@@ -16,7 +16,7 @@ namespace CollegWebApp.Domain.Models
         public string UserMiddleName { get; set; }
         [DataType(DataType.Date)]
         public DateTime UserDataOfBirth { get; set; }
-        public virtual Group UserGroup { get; set; }
+        public int UserGroupId { get; set; }
 
 
         /*public List<IdentityRole> AllRoles { get; set; }
