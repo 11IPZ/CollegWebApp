@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Enums\" />
+    <Folder Include="Initializes\" />
     <Folder Include="Response\" />
   </ItemGroup>
 

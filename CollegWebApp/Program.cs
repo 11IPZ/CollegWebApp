@@ -1,4 +1,5 @@
 using CollegWebApp.DAL;
+using CollegWebApp.DAL.Initializes;
 using CollegWebApp.DAL.Interfaces;
 using CollegWebApp.DAL.Repositories;
 using CollegWebApp.Domain.Models;
@@ -40,13 +41,31 @@ builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 //builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 
- /*builder.Services.AddTransient<IGroupRepository, GroupRepository>();
- builder.Services.AddTransient<IUserRepository, UserRepository>();
+/*builder.Services.AddTransient<IGroupRepository, GroupRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
- builder.Services.AddScoped<IGroupService, GroupService>();
- builder.Services.AddScoped<IUserService, UserService>();*/
+builder.Services.AddScoped<IGroupService, GroupService>();
+builder.Services.AddScoped<IUserService, UserService>();*/
 
- var app = builder.Build();
+var app = builder.Build();
+
+try
+{
+    using (var serviceScope = app.Services.CreateScope())
+    {
+        var services = serviceScope.ServiceProvider;
+
+        var userManager = services.GetRequiredService<UserManager<User>>();
+        var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        await RoleInitializer.InitializeAsync(userManager, rolesManager);
+    }
+}
+catch (Exception)
+{
+
+    throw;
+}
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
