@@ -1,5 +1,6 @@
 ﻿using CollegWebApp.DAL.Interfaces;
 using CollegWebApp.Domain.Models;
+using CollegWebApp.Domain.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace CollegWebApp.DAL.Repositories
@@ -55,6 +56,19 @@ namespace CollegWebApp.DAL.Repositories
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public async Task<List<Profession>> GetAll()
+        {
+            try
+            {
+                List<Profession> professions = await _appContext.Professions.ToListAsync();
+                return professions;
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
 

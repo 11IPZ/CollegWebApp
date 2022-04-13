@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<CollegWebAppContext>(options =>
@@ -38,14 +37,8 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 builder.Services.AddScoped<IGroupRepository, GroupRepository>();
-//builder.Services.AddScoped<IUserRepository, UserRepository>();
-
-
-/*builder.Services.AddTransient<IGroupRepository, GroupRepository>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-
-builder.Services.AddScoped<IGroupService, GroupService>();
-builder.Services.AddScoped<IUserService, UserService>();*/
+builder.Services.AddScoped<ILessonRepository, LessonRepository>();
+builder.Services.AddScoped<IProfessionRepository, ProfessionRepository>();
 
 var app = builder.Build();
 
@@ -62,7 +55,6 @@ try
 }
 catch (Exception)
 {
-
     throw;
 }
 
