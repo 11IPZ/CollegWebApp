@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace CollegWebApp.Domain.Models
 {
@@ -7,7 +8,8 @@ namespace CollegWebApp.Domain.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<User>? Users { get; set; }
-        public virtual ICollection<Lesson>? GroupLessons { get; set; }
+        public Profession Profession { get; set; }
+        public Collection<GroupUser> Users { get; set; }
+        public ICollection<Lesson> Lessons { get; set; }
     }
 }

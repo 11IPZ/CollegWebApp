@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebApp.Domain", "Coll
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebApp.DAL", "CollegWebApp.DAL\CollegWebApp.DAL.csproj", "{D9664B20-19F0-4ACA-B847-C807D5D5CB03}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollegWebAdd.Service", "CollegWebAdd.Service\CollegWebAdd.Service.csproj", "{82BA7139-3BE0-4DDF-9217-413CC9E87A41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9664B20-19F0-4ACA-B847-C807D5D5CB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82BA7139-3BE0-4DDF-9217-413CC9E87A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82BA7139-3BE0-4DDF-9217-413CC9E87A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82BA7139-3BE0-4DDF-9217-413CC9E87A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82BA7139-3BE0-4DDF-9217-413CC9E87A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

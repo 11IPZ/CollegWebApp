@@ -1,0 +1,29 @@
+﻿@model CollegWebApp.Domain.ViewModels.Lesson.LessonCreateViewModel
+
+<h2>Регестрація</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Name"></label><br />
+        <input type="text" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Description"></label><br />
+        <input type="text" asp-for="Description" />
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <label asp-for="HtmlContext"></label><br />
+        <input type="text" asp-for="HtmlContext" />
+        <span asp-validation-for="HtmlContext"></span>
+    </div>
+    <div>
+        <label asp-for="GroupsId"></label><br />
+        <slection id="Id" name="Name" asp-items="ViewBag.Groups"></slection>
+        <span asp-validation-for="GroupsId"></span>
+    </div>
+    <div>
+        <input type="submit" value="Регестрація" />
+    </div>
+</form>

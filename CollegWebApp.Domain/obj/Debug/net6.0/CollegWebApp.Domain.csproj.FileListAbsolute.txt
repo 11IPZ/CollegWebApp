@@ -22,3 +22,15 @@ D:\Нова папка\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebA
 D:\Нова папка\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.dll
 D:\Нова папка\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\ref\CollegWebApp.Domain.dll
 D:\Нова папка\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.pdb
+D:\sd\CollegApp\CollegWebApp.Domain\bin\Debug\net6.0\CollegWebApp.Domain.deps.json
+D:\sd\CollegApp\CollegWebApp.Domain\bin\Debug\net6.0\CollegWebApp.Domain.dll
+D:\sd\CollegApp\CollegWebApp.Domain\bin\Debug\net6.0\ref\CollegWebApp.Domain.dll
+D:\sd\CollegApp\CollegWebApp.Domain\bin\Debug\net6.0\CollegWebApp.Domain.pdb
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.csproj.AssemblyReference.cache
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.AssemblyInfoInputs.cache
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.AssemblyInfo.cs
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.csproj.CoreCompileInputs.cache
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.dll
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\ref\CollegWebApp.Domain.dll
+D:\sd\CollegApp\CollegWebApp.Domain\obj\Debug\net6.0\CollegWebApp.Domain.pdb

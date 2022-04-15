@@ -8,97 +8,109 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CollegWebApp
 build_property.RootNamespace = CollegWebApp
-build_property.ProjectDir = D:\CollegApp\CollegWebApp\
+build_property.ProjectDir = D:\sd\CollegApp\CollegWebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\CollegApp\CollegWebApp
+build_property.MSBuildProjectDirectory = D:\sd\CollegApp\CollegWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/CollegApp/CollegWebApp/Views/Account/Login.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Account/Register.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Groups/Create.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Groups/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Groups/Index.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Groups/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sd/CollegApp/CollegWebApp/Views/Groups/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Home/Index.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Groups/Students.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXFN0dWRlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sd/CollegApp/CollegWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Home/Privacy.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Profession/Create.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Lesson/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/sd/CollegApp/CollegWebApp/Views/Profession/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc2lvblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Profession/Edit.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Profession/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc2lvblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Profession/Index.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Profession/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Roles/Create.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Roles/Edit.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Roles/Index.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Roles/UserList.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Roles/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcVXNlckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Shared/Error.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Users/ChangePassword.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Users/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Users/Create.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Users/Edit.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Users/Index.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/_ViewImports.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/_ViewStart.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CollegApp/CollegWebApp/Views/Shared/_Layout.cshtml]
+[D:/sd/CollegApp/CollegWebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lth9k74e6o

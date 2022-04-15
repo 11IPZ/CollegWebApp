@@ -82,6 +82,7 @@ namespace CollegWebApp.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password.ToString());
                 if (result.Succeeded)
                 {
+                    _groupRepository.AddUser(user.Id, user.UserGroupId + 1);
                     // встановляємо кукі
                     await _signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "Home");

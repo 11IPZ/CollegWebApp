@@ -11,6 +11,53 @@ namespace CollegWebApp.DAL.Repositories
         {
             _appContext = appContext;
         }
+
+        public async Task<bool> AddUser(string UserId, int GroupId)
+        {
+            try
+            {
+                GroupUser gu = new GroupUser()
+                {
+                    UserId = UserId,
+                };
+                await _appContext.AddAsync(gu);
+
+                if (await _appContext.SaveChangesAsync() > 0)
+                {
+                    Group group = await _appContext.Groups.FirstOrDefaultAsync(i => i.Id == GroupId);
+                    var user = _appContext.GroupUsers.FirstOrDefault(i => i.UserId == UserId);
+                    if (group.Users == null)
+                    {
+                        group.Users = new Colection<GroupUser>()
+                        {
+                            user,
+                        };
+                    }
+                    else
+                    {
+                        group.Users.Add(user);
+                    }
+
+                    if (await _appContext.SaveChangesAsync() > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public async Task<bool> CreateAsync(Group entity)
         {
             try

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj": {}
+    "D:\\sd\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj": {}
   },
   "projects": {
-    "D:\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj": {
+    "D:\\sd\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj",
+        "projectUniqueName": "D:\\sd\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj",
         "projectName": "CollegWebApp.Domain",
-        "projectPath": "D:\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj",
+        "projectPath": "D:\\sd\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\CollegApp\\CollegWebApp.Domain\\obj\\",
+        "outputPath": "D:\\sd\\CollegApp\\CollegWebApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CollegApp\\CollegWebAdd.Service\\CollegWebAdd.Service.csproj",
+      "projectUniqueName": "D:\\sd\\CollegApp\\CollegWebAdd.Service\\CollegWebAdd.Service.csproj",
       "projectName": "CollegWebAdd.Service",
-      "projectPath": "D:\\CollegApp\\CollegWebAdd.Service\\CollegWebAdd.Service.csproj",
+      "projectPath": "D:\\sd\\CollegApp\\CollegWebAdd.Service\\CollegWebAdd.Service.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\CollegApp\\CollegWebAdd.Service\\obj\\",
+      "outputPath": "D:\\sd\\CollegApp\\CollegWebAdd.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

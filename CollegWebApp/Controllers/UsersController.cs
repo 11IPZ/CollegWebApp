@@ -45,6 +45,7 @@ namespace CollegWebApp.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    bool r = await _groupRepository.AddUser(user.Id, user.UserGroupId + 1);
                     return RedirectToAction("Index");
                 }
                 else

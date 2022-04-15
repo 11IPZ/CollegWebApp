@@ -14,6 +14,7 @@ namespace CollegWebApp.DAL
 
         public DbSet<Group> Groups { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<GroupUser> GroupUsers { get; set; }
         public DbSet<Profession> Professions { get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -22,7 +23,20 @@ namespace CollegWebApp.DAL
 
             modelBuilder.Entity<Lesson>()
                 .HasMany(a => a.Groups)
-                .WithMany(b => b.GroupLessons);
+                .WithMany(b => b.Lessons);
+
+            modelBuilder.Entity<Profession>()
+                .HasMany(a => a.Groups);
+
+            modelBuilder.Entity<GroupUser>()
+                .HasKey(a => a.Id);
+
+            modelBuilder.Entity<Group>()
+                .HasOne(a => a.Profession)
+                .WithMany(b => b.Groups);
+
+            modelBuilder.Entity<Group>()
+                .HasMany(a => a.Users);
         }
     }
 }

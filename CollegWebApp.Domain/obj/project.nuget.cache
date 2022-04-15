@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8UR9CVbSHfpB+V9hUaHPHe3SR5NVuZ56KA86PkkF5iAO6RZFTu61OOUy5kiCJhvFtDrELQoI2mLY8662OdTsiQ==",
+  "dgSpecHash": "+RZ+YRDJNRgDYRpsceuKXkiivVJwvhZX8II8Zf7eIVLjNIah0YIE4KMhBw2ggoryHYA/bkFxa0mTBQd8D4uzqA==",
   "success": true,
-  "projectFilePath": "D:\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj",
+  "projectFilePath": "D:\\sd\\CollegApp\\CollegWebApp.Domain\\CollegWebApp.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.3\\microsoft.aspnetcore.cryptography.internal.6.0.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.3\\microsoft.aspnetcore.cryptography.keyderivation.6.0.3.nupkg.sha512",

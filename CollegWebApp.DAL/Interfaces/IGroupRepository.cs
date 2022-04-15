@@ -5,5 +5,6 @@ namespace CollegWebApp.DAL.Interfaces
     public interface IGroupRepository : IBaseRepository<Group>
     {
         public Task<List<Group>> GetAll();
+        public Task<bool> AddUser(string UserId, int GroupId);
     }
 }
