@@ -95,7 +95,15 @@ namespace CollegWebApp.Controllers
                     user.UserSurname = model.UserSurname;
                     user.UserMiddleName = model.UserMiddleName;
                     user.UserDataOfBirth = model.UserDataOfBirth;
-                    user.UserGroupId = model.UserGroupId;
+
+                    model.UserGroupId =+ 1;
+
+                    if (user.UserGroupId != model.UserGroupId)
+                    {
+                        bool r = await _groupRepository.EditUserGroup(user.Id, user.UserGroupId, model.UserGroupId);
+                        if(!r)
+                            return View(model);
+                    }
 
                     var result = await _userManager.UpdateAsync(user);
                     if (result.Succeeded)

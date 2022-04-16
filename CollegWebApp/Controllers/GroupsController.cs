@@ -26,9 +26,19 @@ namespace CollegWebApp.Controllers
         }
         public async Task<IActionResult> Students(int GroupId)
         {
-            var users = _userManager.Users.Where(i => i.UserGroupId == GroupId).ToList();
+            /*var users = _userManager.Users.Where(i => i.UserGroupId == GroupId).ToList();*/
+            List<string> usersId = await _groupRepository.FindUsers(GroupId);
+            List<User> users = new List<User>();
 
+            if (usersId != null)
+            {
+                foreach (var item in usersId)
+                {
+                    users.Add(await _userManager.FindByIdAsync(item));
+                }
+            }
             return View(users);
+
         }
         public async Task<IActionResult> Create()
         {
@@ -55,7 +65,6 @@ namespace CollegWebApp.Controllers
             return RedirectToAction("Create");
         }
 
-        //TODO треба зробити шоб GroupUser ше тут був
         public async Task<IActionResult> Edit(int id)
         {
             Group group = await _groupRepository.GetById(id);

@@ -19,38 +19,15 @@ namespace CollegWebApp.DAL.Repositories
                 GroupUser gu = new GroupUser()
                 {
                     UserId = UserId,
+                    GroupId = GroupId
                 };
                 await _appContext.AddAsync(gu);
 
                 if (await _appContext.SaveChangesAsync() > 0)
                 {
-                    Group group = await _appContext.Groups.FirstOrDefaultAsync(i => i.Id == GroupId);
-                    var user = _appContext.GroupUsers.FirstOrDefault(i => i.UserId == UserId);
-                    if (group.Users == null)
-                    {
-                        group.Users = new Colection<GroupUser>()
-                        {
-                            user,
-                        };
-                    }
-                    else
-                    {
-                        group.Users.Add(user);
-                    }
-
-                    if (await _appContext.SaveChangesAsync() > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return true;
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
             catch (Exception)
             {
@@ -102,6 +79,67 @@ namespace CollegWebApp.DAL.Repositories
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public async Task<bool> EditUserGroup(string UserId, int LastGroupId, int NewGroupId)
+        {
+            try
+            {
+                if (LastGroupId == 0)
+                {
+                    bool result = await AddUser(UserId, NewGroupId);
+
+                    if (result)
+                        return true;
+                }
+                else
+                {
+                    GroupUser lastGroupUser = await _appContext.GroupUsers.FirstOrDefaultAsync(x => x.GroupId == LastGroupId);
+                    Group newGroup = await _appContext.Groups.FirstOrDefaultAsync(x => x.Id == NewGroupId);
+
+                    if (lastGroupUser != null && newGroup != null)
+                    {
+                        await AddUser(UserId, NewGroupId);
+                        _appContext.GroupUsers.Remove(lastGroupUser);
+
+                        if(await _appContext.SaveChangesAsync() > 0)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<List<string>> FindUsers(int GroupId)
+        {
+            try
+            {
+                if(GroupId != 0)
+                {
+                    List<string> usersId = new List<string>();
+
+                    List<GroupUser> gu = _appContext.GroupUsers.Where(i => i.GroupId == GroupId).ToList();
+                    if (gu.Count > 0)
+                    {
+                        foreach (GroupUser item in gu)
+                        {
+                            usersId.Add(item.UserId);
+                        }
+                        return usersId;
+                    }
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
 

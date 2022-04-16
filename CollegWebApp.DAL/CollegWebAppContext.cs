@@ -35,8 +35,6 @@ namespace CollegWebApp.DAL
                 .HasOne(a => a.Profession)
                 .WithMany(b => b.Groups);
 
-            modelBuilder.Entity<Group>()
-                .HasMany(a => a.Users);
         }
     }
 }
