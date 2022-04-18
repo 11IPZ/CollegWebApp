@@ -11,6 +11,37 @@ namespace CollegWebApp.DAL.Repositories
         {
             _appContext = appContext;
         }
+
+        public async Task<bool> AddGroup(int LessonId, List<int> GroupsId)
+        {
+            try
+            {
+                if(GroupsId.Count() != 0 && LessonId != null)
+                {
+                    foreach(int item in GroupsId)
+                    {
+                        GroupLesson gl = new GroupLesson()
+                        {
+                            LessonId = LessonId,
+                            GroupId = item,
+                        };
+
+                        await _appContext.AddAsync(gl);
+                    }
+
+                    if (await _appContext.SaveChangesAsync() > 0)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public async Task<bool> CreateAsync(Lesson entity)
         {
             try
@@ -58,9 +89,73 @@ namespace CollegWebApp.DAL.Repositories
             }
         }
 
-        public Task<ICollection<Lesson>> GetAll(int groupId)
+        public async Task<bool> EditGroup(int LessonId, List<int> LastGroupsId, List<int> NewGroupsId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (LastGroupsId.Count == 0)
+                {
+                    bool result = await AddGroup(LessonId, NewGroupsId);
+
+                    if (result)
+                        return true;
+                }
+                else
+                {
+                    List<GroupLesson> lastGroupsLesson = await _appContext.GroupLessons.Where(x => x.LessonId == LessonId).ToListAsync();
+
+                    if (NewGroupsId.Count != 0)
+                    {
+                        bool result = await AddGroup(LessonId, NewGroupsId);
+                        if(result)
+                        {
+                            foreach(var groupLesson in lastGroupsLesson)
+                            {
+                                _appContext.GroupLessons.Remove(groupLesson);
+
+                            }
+
+                            if (await _appContext.SaveChangesAsync() > 0)
+                            {
+                                return true;
+                            }
+
+                        }
+                    }
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<List<Lesson>> GetAll(int groupId)
+        {
+            try
+            {
+                if(groupId != null)
+                {
+                    List<Lesson> lessons = new List<Lesson>();
+
+                    List<GroupLesson> gl = await _appContext.GroupLessons.Where(x => x.GroupId == groupId).ToListAsync();
+
+                    foreach(var l in gl)
+                    {
+                        Lesson lesson = await _appContext.Lessons.FirstOrDefaultAsync(x => x.Id == l.Id);
+                        lessons.Add(lesson);
+                    }
+
+                    if(lessons.Count > 0)
+                        return lessons;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public async Task<Lesson> GetById(int id)
@@ -105,7 +200,7 @@ namespace CollegWebApp.DAL.Repositories
             }
         }
 
-        public Task<ICollection<Lesson>> GetNumberNewest(int number, int groupId)
+        public Task<List<Lesson>> GetNumberNewest(int number, int groupId)
         {
             throw new NotImplementedException();
         }

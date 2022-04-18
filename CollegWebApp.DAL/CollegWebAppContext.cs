@@ -15,15 +15,12 @@ namespace CollegWebApp.DAL
         public DbSet<Group> Groups { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<GroupUser> GroupUsers { get; set; }
+        public DbSet<GroupLesson> GroupLessons { get; set; }
         public DbSet<Profession> Professions { get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Lesson>()
-                .HasMany(a => a.Groups)
-                .WithMany(b => b.Lessons);
 
             modelBuilder.Entity<Profession>()
                 .HasMany(a => a.Groups);

@@ -4,7 +4,10 @@ namespace CollegWebApp.DAL.Interfaces
 {
     public interface ILessonRepository : IBaseRepository<Lesson>
     {
-        Task<ICollection<Lesson>> GetAll(int groupId);
-        Task<ICollection<Lesson>> GetNumberNewest(int number, int groupId);
+        public Task<List<Lesson>> GetAll(int groupId);
+        public Task<List<Lesson>> GetNumberNewest(int number, int groupId);
+        public Task<bool> AddGroup(int LessonId, List<int> GroupsId);
+        public Task<bool> EditGroup(int LessonId, List<int> LastGroupsId, List<int> NewGroupsId);
+
     }
 }

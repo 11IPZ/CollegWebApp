@@ -13,7 +13,6 @@ namespace CollegWebApp.Domain.Models
         public string HtmlContext { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime DateTimeCreate { get; set; }
-        public int CreatorId { get; set; }
-        public ICollection<Group> Groups { get; set;}
+        public string CreatorId { get; set; }
     }
 }
