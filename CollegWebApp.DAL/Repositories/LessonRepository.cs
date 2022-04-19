@@ -12,6 +12,24 @@ namespace CollegWebApp.DAL.Repositories
             _appContext = appContext;
         }
 
+        public async Task<Tuple<int, bool>> Add(Lesson lesson)
+        {
+            try
+            {
+                await _appContext.Lessons.AddAsync(lesson);
+
+                if (await _appContext.SaveChangesAsync() > 0)
+                {
+                    return Tuple.Create(lesson.Id, true);
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public async Task<bool> AddGroup(int LessonId, List<int> GroupsId)
         {
             try
@@ -193,6 +211,34 @@ namespace CollegWebApp.DAL.Repositories
                 {
                     return lesson;
                 }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public async Task<List<int>> GetGroupsByLessonId(int id)
+        {
+            try
+            {
+                if(id != 0 && id != null)
+                {
+                    List<GroupLesson> gl = await _appContext.GroupLessons.Where(x => x.LessonId == id).ToListAsync();
+
+                    if (gl.Count > 0)
+                    {
+                        List<int> groupsId = new List<int>();
+
+                        foreach (var item in gl)
+                        {
+                            groupsId.Add(item.LessonId);
+                        }
+
+                        return groupsId;
+                    }
+                }
+                return null;
             }
             catch (Exception)
             {
