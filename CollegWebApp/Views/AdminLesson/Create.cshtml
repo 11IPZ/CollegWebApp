@@ -1,10 +1,9 @@
-﻿@using System.Web
-@model CollegWebApp.Domain.ViewModels.Lesson.LessonEditViewModel
+﻿@model CollegWebApp.Domain.ViewModels.Lesson.LessonCreateViewModel
 
 <link href="~/lib/Trumbowyg-main/dist/ui/trumbowyg.css" rel="stylesheet" />
 
-<h2>Рудагування уроку</h2>
-<form method="post" asp-controller="Lesson" asp-action="Edit">
+<h2>Створення уроку</h2>
+<form method="post" asp-controller="AdminLesson" asp-action="Create">
     <div asp-validation-summary="ModelOnly"></div>
     <div>
         <label asp-for="Name"></label><br />
@@ -26,7 +25,7 @@
         <span asp-validation-for="GroupsId"></span>
     </div>
     <div>
-        <input type="submit" value="Зберешти" />
+        <input type="submit" value="Создати" />
     </div>
 </form>
 
@@ -34,11 +33,7 @@
     <script src="~/lib~/lib/jquery/jquery.min.js"></script>
     <script src="~/lib/Trumbowyg-main/dist/trumbowyg.min.js"></script>
     <script>
-        @{string text = Model.HtmlContext;}
-        var text2 = "@Html.Raw(HttpUtility.JavaScriptStringEncode(text))";
         $('#editor').trumbowyg();
-
-        $('#editor').trumbowyg('html', text2 );
         // . - class
         // # - id
         // nav - html element

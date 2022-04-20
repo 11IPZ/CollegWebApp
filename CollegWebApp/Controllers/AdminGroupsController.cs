@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CollegWebApp.Controllers
 {
-    public class GroupsController : Controller
+    public class AdminGroupsController : Controller
     {
         public readonly IGroupRepository _groupRepository;
         public readonly IProfessionRepository _professionRepository;
         UserManager<User> _userManager;
-        public GroupsController(IGroupRepository groupRepository, IProfessionRepository professionRepository, UserManager<User> userManager)
+        public AdminGroupsController(IGroupRepository groupRepository, IProfessionRepository professionRepository, UserManager<User> userManager)
         {
             _groupRepository = groupRepository;
             _professionRepository = professionRepository;

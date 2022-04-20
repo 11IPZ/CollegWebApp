@@ -1,5 +1,6 @@
 ﻿using CollegWebApp.DAL.Interfaces;
 using CollegWebApp.Domain.Models;
+using CollegWebApp.Domain.ViewModels;
 using CollegWebApp.Domain.ViewModels.Lesson;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -7,19 +8,51 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CollegWebApp.Controllers
 {
-    public class LessonController : Controller
+    public class AdminLessonController : Controller
     {
         private readonly ILessonRepository _lessonRepository;
         private readonly IGroupRepository _groupRepository;
         UserManager<User> _userManager;
-        public LessonController(ILessonRepository lessonRepository, IGroupRepository groupRepository, UserManager<User> userManager)
+        public AdminLessonController(ILessonRepository lessonRepository, IGroupRepository groupRepository, UserManager<User> userManager)
         {
             _lessonRepository = lessonRepository;
             _groupRepository = groupRepository;
             _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index(int LessonId)
+        public async Task<IActionResult> Index(List<int>? groupsId, string name)
+        {
+            List<Lesson> lessons = new List<Lesson>();
+            if(!(groupsId != null && groupsId.Count != 0 && !String.IsNullOrEmpty(name)))
+            {
+                lessons = await _lessonRepository.GetAll();   
+            }
+            else if (groupsId != null && groupsId.Count != 0 && !String.IsNullOrEmpty(name))
+            {
+                lessons = await _lessonRepository.GetByIndexParmtr(groupsId, name);
+            }
+            else if (groupsId != null && groupsId.Count != 0)
+            {
+                lessons = await _lessonRepository.GetByIndexParmtr(null, name);
+            }
+            else if (!String.IsNullOrEmpty(name))
+            {
+                lessons = await _lessonRepository.GetByIndexParmtr(groupsId, null);
+            }
+
+            ViewBag.Groups = new MultiSelectList(await _groupRepository.GetAll(), "Id", "Name");
+
+            LessonListViewModel viewModel = new LessonListViewModel
+            {
+                Lessons = lessons,
+                Name = name,
+
+            };
+
+            return View(lessons);
+        }
+
+        public async Task<IActionResult> Lesson(int LessonId)
         {
             Lesson lesson = await _lessonRepository.GetById(LessonId);
             return View(lesson);

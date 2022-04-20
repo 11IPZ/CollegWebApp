@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CollegWebApp.Domain.Models.Lesson>
+
+<form method="get">
+    <div class="form-inline form-group">
+        <label class="control-label">Ім'я: </label>
+        <input name="name" asp-item="@ViewBag.name" class="form-control" />
+ 
+        <label class="control-label">Групи: </label>
+        <select name="groupsId" asp-items="@ViewBag.Groups" class="form-control" multiple></select>
+ 
+        <input type="submit" value="Фильтр" class="btn btn-default" />
+    </div>
+</form>
+ 
+<h2>Список груп</h2>
+<table class="table">
+    @if (Model.Count() == 0)
+    {
+        <p>Групи відсутні</p>
+    }
+    else
+    {
+        @foreach (var lesson in Model)
+        {
+            <tr>
+                <td>@lesson.Name</td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@Convert.ToInt32(lesson.Id)" method="post">
+                        <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@lesson.Id">Редактувати</a>
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Видалити
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    }
+</table>
+<a asp-action="Create">Додати спеціальність</a>

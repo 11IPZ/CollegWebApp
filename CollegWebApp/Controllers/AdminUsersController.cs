@@ -9,12 +9,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace CollegWebApp.Controllers
 {
     [Authorize(Roles = "admin")]
-    public class UsersController : Controller
+    public class AdminUsersController : Controller
     {
         UserManager<User> _userManager;
         private readonly IGroupRepository _groupRepository;
 
-        public UsersController(UserManager<User> userManager, IGroupRepository groupRepository)
+        public AdminUsersController(UserManager<User> userManager, IGroupRepository groupRepository)
         {
             _userManager = userManager;
             _groupRepository = groupRepository;

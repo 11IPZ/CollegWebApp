@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace CollegWebApp.Controllers
 {
     [Authorize(Roles = "admin")]
-    public class ProfessionController : Controller
+    public class AdminProfessionController : Controller
     {
         private readonly IProfessionRepository _professionRepository;
 
-        public ProfessionController(IProfessionRepository professionRepository)
+        public AdminProfessionController(IProfessionRepository professionRepository)
         {
             _professionRepository = professionRepository;
         }

@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace CollegWebApp.Controllers
 {
     [Authorize(Roles = "admin")]
-    public class RolesController : Controller
+    public class AdminRolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
         UserManager<User> _userManager;
 
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        public AdminRolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;

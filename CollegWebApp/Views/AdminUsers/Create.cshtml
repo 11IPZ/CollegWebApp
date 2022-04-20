@@ -1,15 +1,16 @@
-﻿@model CollegWebApp.Domain.ViewModels.EditUserViewModel
+﻿@model CollegWebApp.Domain.ViewModels.CreateUserViewModel
 @{
-    ViewBag.Title = "Редактування користувача";
+    ViewBag.Title = "Додавання користувача";
 }
-<form asp-action="Edit" asp-controller="Users">
+<form asp-action="Create" asp-controller="AdminUsers">
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <input type="hidden" asp-for="Id" />
-    </div>
     <div class="form-group">
         <label asp-for="Email" class="control-label">Email</label>
         <input type="text" asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="control-label">Пароль</label>
+        <input type="password" asp-for="Password" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="Name" class="control-label">Ім'я</label>
@@ -33,6 +34,6 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />
+        <input type="submit" value="Добавить" class="btn btn-outline-secondary" />
     </div>
 </form>

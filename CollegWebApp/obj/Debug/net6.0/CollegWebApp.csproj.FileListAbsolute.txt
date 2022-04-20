@@ -222,3 +222,10 @@ D:\sd\CollegApp\CollegWebApp\obj\Debug\net6.0\scopedcss\bundle\CollegWebApp.styl
 D:\sd\CollegApp\CollegWebApp\obj\Debug\net6.0\scopedcss\projectbundle\CollegWebApp.bundle.scp.css
 D:\sd\CollegApp\CollegWebApp\obj\Debug\net6.0\CollegWebApp.csproj.CopyComplete
 D:\sd\CollegApp\CollegWebApp\obj\Debug\net6.0\CollegWebApp.genruntimeconfig.cache
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\System.Web.Mvc.dll
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\System.Web.Razor.dll
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\System.Web.Helpers.dll
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\System.Web.WebPages.dll
+D:\sd\CollegApp\CollegWebApp\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

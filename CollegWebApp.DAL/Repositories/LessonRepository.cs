@@ -149,7 +149,25 @@ namespace CollegWebApp.DAL.Repositories
             }
         }
 
-        public async Task<List<Lesson>> GetAll(int groupId)
+        public async Task<List<Lesson>> GetAll()
+        {
+            try
+            {
+
+                List<Lesson> lessons = await _appContext.Lessons.ToListAsync();
+
+                if (lessons.Count > 0)
+                    return lessons;
+
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public async Task<List<Lesson>> GetByGroup(int groupId)
         {
             try
             {
@@ -190,6 +208,80 @@ namespace CollegWebApp.DAL.Repositories
                 {
                     return lesson;
                 }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public async Task<List<Lesson>> GetByIndexParmtr(List<int> group, string name)
+        {
+            try
+            {
+                if(!String.IsNullOrEmpty(name) && group != null && group.Count != 0)
+                {
+                    List<Lesson> lessons = new List<Lesson>();
+
+                    foreach (int id in group)
+                    {
+                        List<Lesson> l = await GetByGroup(id);
+                        foreach (var item in l)
+                        {
+                            lessons.Add(item);
+                        }
+                    }
+
+                    List<Lesson> result = lessons.Where(x => x.Name.Contains(name)).ToList();
+
+                    if (result.Count > 0)
+                        return result;
+                }
+                else if(String.IsNullOrEmpty(name) && group != null && group.Count != 0)
+                {
+                    /*List<int> lessonsId = new List<int>();
+                    List<GroupLesson> groupLessons = new List<GroupLesson>();*/
+                    List<Lesson> lessons = new List<Lesson>();
+
+                    foreach (int id in group)
+                    {
+                        List<Lesson> l = await GetByGroup(id);
+                        foreach (var item in l)
+                        {
+                            lessons.Add(item);
+                        }
+                    }
+
+                    if (lessons.Count > 0)
+                        return lessons;
+
+                    /*if(groupLessons.Count > 0)
+                    {
+                        foreach (var item in groupLessons)
+                        {
+                            lessonsId.Add(item.LessonId);
+                        }
+
+                        List<Lesson> lessons = new List<Lesson>();
+                        foreach (int id in lessonsId)
+                        {
+                            Lesson lesson = await _appContext.Lessons.FirstOrDefaultAsync(x => x.Id == id);
+                            lessons.Add(lesson);
+                        }
+
+                        if (lessons.Count > 0)
+                            return lessons; 
+                    }*/
+                }
+                else if(group == null && group.Count == 0 && !String.IsNullOrEmpty(name))
+                {
+                    List<Lesson> lessons = await _appContext.Lessons.Where(x => x.Name.Contains(name)).ToListAsync();
+
+                    if (lessons.Count > 0)
+                        return lessons;
+                }
+
+                return null;
             }
             catch (Exception)
             {
