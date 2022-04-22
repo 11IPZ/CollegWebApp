@@ -25,8 +25,17 @@ namespace CollegWebApp.Controllers
         {
             List<Lesson> lessons = new List<Lesson>();
 
+            bool all = false;
+            if(groupsId != null)
+            {
+                foreach (int num in groupsId)
+                {
+                    if(num == 0)
+                        all = true;
+                }
+            }
             // groupsId and name == null
-            if((groupsId == null || groupsId.Count == 0) && String.IsNullOrEmpty(name))
+            if(((groupsId == null || groupsId.Count == 0) && String.IsNullOrEmpty(name)) || all)
             {
                 lessons = await _lessonRepository.GetAll();   
             }
@@ -46,7 +55,9 @@ namespace CollegWebApp.Controllers
                 lessons = await _lessonRepository.GetByIndexParmtr(null, name);
             }
 
-            ViewBag.Groups = new MultiSelectList(await _groupRepository.GetAll(), "Id", "Name");
+            List<Group> groups = await _groupRepository.GetAll();
+            groups.Insert(0, new Group { Id = 0, Name = "Всі" });
+            ViewBag.Groups = new MultiSelectList(groups, "Id", "Name");
 
             LessonListViewModel viewModel = new LessonListViewModel
             {
