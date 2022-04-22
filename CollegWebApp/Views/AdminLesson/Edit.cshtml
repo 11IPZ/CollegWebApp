@@ -22,7 +22,7 @@
     </div>
     <div>
         <label asp-for="GroupsId"></label><br />
-        <select id="Id" name="Name" asp-items="ViewBag.Groups" multiple></select>
+        <select asp-for="GroupsId" asp-items="ViewBag.Groups" multiple></select>
         <span asp-validation-for="GroupsId"></span>
     </div>
     <div>

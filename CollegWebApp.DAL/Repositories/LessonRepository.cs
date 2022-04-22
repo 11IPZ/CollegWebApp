@@ -111,12 +111,15 @@ namespace CollegWebApp.DAL.Repositories
         {
             try
             {
-                if (LastGroupsId.Count == 0)
+                if (LastGroupsId != null)
                 {
-                    bool result = await AddGroup(LessonId, NewGroupsId);
+                    if(LastGroupsId.Count() > 0)
+                    {
+                        bool result = await AddGroup(LessonId, NewGroupsId);
 
-                    if (result)
-                        return true;
+                        if (result)
+                            return true;
+                    }
                 }
                 else
                 {
@@ -318,7 +321,7 @@ namespace CollegWebApp.DAL.Repositories
                 {
                     List<GroupLesson> gl = await _appContext.GroupLessons.Where(x => x.LessonId == id).ToListAsync();
 
-                    if (gl.Count > 0)
+                    if (gl.Count > 0 && gl != null)
                     {
                         List<int> groupsId = new List<int>();
 

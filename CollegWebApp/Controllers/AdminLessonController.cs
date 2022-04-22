@@ -20,24 +20,30 @@ namespace CollegWebApp.Controllers
             _userManager = userManager;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index(List<int>? groupsId, string name)
         {
             List<Lesson> lessons = new List<Lesson>();
-            if(!(groupsId != null && groupsId.Count != 0 && !String.IsNullOrEmpty(name)))
+
+            // groupsId and name == null
+            if((groupsId == null || groupsId.Count == 0) && String.IsNullOrEmpty(name))
             {
                 lessons = await _lessonRepository.GetAll();   
             }
-            else if (groupsId != null && groupsId.Count != 0 && !String.IsNullOrEmpty(name))
+            // groupsId and name == not empty or null
+            else if ((groupsId != null && groupsId.Count != 0) && !String.IsNullOrEmpty(name))
             {
                 lessons = await _lessonRepository.GetByIndexParmtr(groupsId, name);
             }
-            else if (groupsId != null && groupsId.Count != 0)
-            {
-                lessons = await _lessonRepository.GetByIndexParmtr(null, name);
-            }
-            else if (!String.IsNullOrEmpty(name))
+            // name is empty, groupsId not null
+            else if (groupsId != null || groupsId.Count != 0)
             {
                 lessons = await _lessonRepository.GetByIndexParmtr(groupsId, null);
+            }
+            // groupsId is null, name not empty
+            else if (!String.IsNullOrEmpty(name))
+            {
+                lessons = await _lessonRepository.GetByIndexParmtr(null, name);
             }
 
             ViewBag.Groups = new MultiSelectList(await _groupRepository.GetAll(), "Id", "Name");
@@ -122,6 +128,7 @@ namespace CollegWebApp.Controllers
                     CreatorId=user.Id
                 };
                 List<int> lastGroupsId = await _lessonRepository.GetGroupsByLessonId(model.Id);
+                await _lessonRepository.EditGroup(lesson.Id,lastGroupsId,model.GroupsId);
 
                 bool result = await _lessonRepository.Update(lesson);
                 if(result)
