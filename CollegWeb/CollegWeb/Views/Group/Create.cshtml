@@ -1,0 +1,14 @@
+﻿@model CollegWeb.Domain.ViewModels.Group.CreateGroupViewModel
+ 
+<h2>Створення групи</h2>
+<form method="post" asp-controller="Group" asp-action="Create">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Name"></label><br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <input type="submit" value="Створити" />
+    </div>
+</form>
