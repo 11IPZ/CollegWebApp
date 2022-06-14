@@ -1,0 +1,15 @@
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.csproj.AssemblyReference.cache
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.AssemblyInfoInputs.cache
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.AssemblyInfo.cs
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.csproj.CoreCompileInputs.cache
+D:\source\CollegWeb\CollegWeb.DAL\bin\Debug\net6.0\CollegWeb.DAL.deps.json
+D:\source\CollegWeb\CollegWeb.DAL\bin\Debug\net6.0\CollegWeb.DAL.dll
+D:\source\CollegWeb\CollegWeb.DAL\bin\Debug\net6.0\ref\CollegWeb.DAL.dll
+D:\source\CollegWeb\CollegWeb.DAL\bin\Debug\net6.0\CollegWeb.DAL.pdb
+D:\source\CollegWeb\CollegWeb.DAL\bin\Debug\net6.0\CollegWeb.Domain.dll
+D:\source\CollegWeb\CollegWeb.DAL\bin\Debug\net6.0\CollegWeb.Domain.pdb
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.csproj.CopyComplete
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.dll
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\ref\CollegWeb.DAL.dll
+D:\source\CollegWeb\CollegWeb.DAL\obj\Debug\net6.0\CollegWeb.DAL.pdb

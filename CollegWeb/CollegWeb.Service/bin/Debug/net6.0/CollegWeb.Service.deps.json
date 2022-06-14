@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CollegWeb.Service/1.0.0": {
+        "runtime": {
+          "CollegWeb.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CollegWeb.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

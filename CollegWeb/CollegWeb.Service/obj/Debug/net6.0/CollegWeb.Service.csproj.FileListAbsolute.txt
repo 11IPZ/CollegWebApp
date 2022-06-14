@@ -1,0 +1,12 @@
+D:\source\CollegWeb\CollegWeb.Service\bin\Debug\net6.0\CollegWeb.Service.deps.json
+D:\source\CollegWeb\CollegWeb.Service\bin\Debug\net6.0\CollegWeb.Service.dll
+D:\source\CollegWeb\CollegWeb.Service\bin\Debug\net6.0\ref\CollegWeb.Service.dll
+D:\source\CollegWeb\CollegWeb.Service\bin\Debug\net6.0\CollegWeb.Service.pdb
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.csproj.AssemblyReference.cache
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.AssemblyInfoInputs.cache
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.AssemblyInfo.cs
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.csproj.CoreCompileInputs.cache
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.dll
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\ref\CollegWeb.Service.dll
+D:\source\CollegWeb\CollegWeb.Service\obj\Debug\net6.0\CollegWeb.Service.pdb

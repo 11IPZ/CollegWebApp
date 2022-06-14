@@ -1,0 +1,49 @@
+/* _content/CollegWeb/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-nj2zu2uu83] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-nj2zu2uu83] {
+  color: #0077cc;
+}
+
+.btn-primary[b-nj2zu2uu83] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-nj2zu2uu83], .nav-pills .show > .nav-link[b-nj2zu2uu83] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-nj2zu2uu83] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-nj2zu2uu83] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-nj2zu2uu83] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-nj2zu2uu83] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-nj2zu2uu83] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
