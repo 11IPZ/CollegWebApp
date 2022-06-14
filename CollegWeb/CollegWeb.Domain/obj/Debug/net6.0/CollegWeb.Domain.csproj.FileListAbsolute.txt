@@ -10,3 +10,15 @@ D:\source\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.csproj.Co
 D:\source\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.dll
 D:\source\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\ref\CollegWeb.Domain.dll
 D:\source\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.pdb
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\bin\Debug\net6.0\CollegWeb.Domain.deps.json
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\bin\Debug\net6.0\CollegWeb.Domain.dll
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\bin\Debug\net6.0\ref\CollegWeb.Domain.dll
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\bin\Debug\net6.0\CollegWeb.Domain.pdb
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.csproj.AssemblyReference.cache
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.AssemblyInfoInputs.cache
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.AssemblyInfo.cs
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.csproj.CoreCompileInputs.cache
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.dll
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\ref\CollegWeb.Domain.dll
+D:\source\CollegWebApp\CollegWeb\CollegWeb.Domain\obj\Debug\net6.0\CollegWeb.Domain.pdb
