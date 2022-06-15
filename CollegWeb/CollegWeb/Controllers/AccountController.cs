@@ -29,8 +29,10 @@ namespace CollegWeb.Controllers
         {
             if (!ModelState.IsValid)
             {
+
+
                 var result =
-                    await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                    await _signInManager.PasswordSignInAsync(model.Email, HashPasswordHelper.HashPassword(model.Password), model.RememberMe, false);
                 if (result.Succeeded)
                 {
                     // провіляєм,чи належить URL додатку

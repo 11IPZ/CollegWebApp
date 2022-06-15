@@ -1,9 +1,11 @@
-﻿using CollegWeb.DAL.Interfaces;
+﻿using CollegWeb.DAL;
+using CollegWeb.DAL.Interfaces;
 using CollegWeb.Domain.Models;
 using CollegWeb.Domain.Response;
 using CollegWeb.Domain.ViewModels.Group;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace CollegWeb.Controllers
 {
@@ -32,7 +34,22 @@ namespace CollegWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateGroupViewModel model)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var _user = await _userManager.FindByIdAsync(userId);
+
+            var FirstUser = new List<UserApp>();
+            FirstUser.Add(_user);
             
+
+            Group group = new Group()
+            {
+                Name = model.Name,
+                AdminUserId = userId,
+                Code = userId + model.Name,
+            };
+
+            await _group.Create(group);
+            return RedirectToAction("Index", "Home");
         }
 
     }

@@ -24,7 +24,7 @@ namespace CollegWeb.DAL.Repositories
             {
                 if (entity is not null)
                 {
-                    await _context.Groups.AddAsync(entity);
+                    await _context.AddAsync(entity);
 
                     if (await _context.SaveChangesAsync() >= 1)
                     {
