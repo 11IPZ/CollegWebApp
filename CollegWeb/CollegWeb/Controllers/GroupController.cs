@@ -35,11 +35,6 @@ namespace CollegWeb.Controllers
         public async Task<IActionResult> Create(CreateGroupViewModel model)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var _user = await _userManager.FindByIdAsync(userId);
-
-            var FirstUser = new List<UserApp>();
-            FirstUser.Add(_user);
-            
 
             Group group = new Group()
             {
@@ -49,6 +44,8 @@ namespace CollegWeb.Controllers
             };
 
             await _group.Create(group);
+            await _group.CreateGroupUserRelationship(group.Id, userId);
+
             return RedirectToAction("Index", "Home");
         }
 

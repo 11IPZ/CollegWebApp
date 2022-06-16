@@ -10,25 +10,23 @@ namespace CollegWeb.DAL
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
         : base(options)
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
 
-        public DbSet<UserApp> Users;
-        public DbSet<Group> Groups;
-        public DbSet<Lesson> Lessons;
+        public DbSet<UserApp> Users { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<GroupUserApp> GroupUsers { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<Group>()
-                .HasMany(g => g.Users)
-                .WithMany(g => g.Groups);
-
             builder.Entity<Lesson>()
                 .HasOne<Group>()
                 .WithMany(x => x.Lessons);
+
         }
     }
 }

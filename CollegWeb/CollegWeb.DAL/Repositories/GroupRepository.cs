@@ -24,7 +24,15 @@ namespace CollegWeb.DAL.Repositories
             {
                 if (entity is not null)
                 {
-                    await _context.AddAsync(entity);
+                    if(await _context.Groups.FirstOrDefaultAsync(x => x.Name == entity.Name) != null)
+                    {
+                        result.Description = place + nameof(Create);
+                        result.StatusCode = StatusCode.GroupNotCreated;
+
+                        return result;
+                    }
+
+                    await _context.Groups.AddAsync(entity);
 
                     if (await _context.SaveChangesAsync() >= 1)
                     {
@@ -44,6 +52,49 @@ namespace CollegWeb.DAL.Repositories
             {
                 result.Description = place + nameof(Create) + c.Message;
                 result.StatusCode = StatusCode.TryCatchError;
+
+                return result;
+            }
+        }
+
+        public async Task<BaseResponse<bool>> CreateGroupUserRelationship(int GroupId, string UserId)
+        {
+            var result = new BaseResponse<bool>();
+
+            try
+            {
+                if (GroupId != null && UserId != null)
+                {
+                    var GroupUserAppList = await _context.GroupUsers.Where(x => x.GroupId == GroupId).ToListAsync();
+                    var UserList = GroupUserAppList.Where(x => x.UserId == UserId).ToList();
+                    if (UserList.Count() == 0)
+                    {
+                        var model = new GroupUserApp()
+                        {
+                            GroupId = GroupId,
+                            UserId = UserId
+                        };
+                        await _context.GroupUsers.AddAsync(model);
+                    }
+
+                    if (await _context.SaveChangesAsync() >= 1)
+                    {
+                        result.Data = true;
+                        result.StatusCode = StatusCode.OK;
+
+                        return result;
+                    }
+                }
+
+                result.Description = place + nameof(Create);
+                result.StatusCode = StatusCode.GroupUserRelationshipNotCreated;
+
+                return result;
+            }
+            catch (Exception c)
+            {
+                result.Description = place + nameof(Create) + c.Message;
+                result.StatusCode = StatusCode.GroupUserRelationshipNotCreated;
 
                 return result;
             }
@@ -125,7 +176,14 @@ namespace CollegWeb.DAL.Repositories
             {
                 if (id != null)
                 {
-                    ICollection<Group> groups = await _context.Groups.Where(x => x.Users.Where(r => r.Id == id).Any()).ToArrayAsync();
+                    var listIdOfGrops = _context.GroupUsers.Where(x => x.UserId == id).ToList();
+                    List<Group> groups = new();
+                    foreach (var item in listIdOfGrops)
+                    {
+                        Group group = await _context.Groups.FirstOrDefaultAsync(x => x.Id == item.GroupId);
+                        if(group != null)
+                            groups.Add(group);
+                    }
 
                     if (groups.Count() != 0)
                     {

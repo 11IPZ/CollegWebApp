@@ -11,8 +11,6 @@ namespace CollegWeb.Domain.Models
         public string Code { get; set; }
         public string AdminUserId { get; set; }
 
-        public List<UserApp> Users { get; set; }
-
         [ForeignKey(nameof(Lesson.GroupId))]
         public ICollection<Lesson> Lessons { get; set; }
     }

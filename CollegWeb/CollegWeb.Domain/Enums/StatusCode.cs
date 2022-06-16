@@ -21,6 +21,8 @@
         ModelIsNullOrEmpty = 20,
 
         TryCatchError = 21,
+        GroupUserRelationshipNotCreated = 22,
+
 
         OK = 200,
         InternalServerError = 500

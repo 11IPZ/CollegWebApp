@@ -6,5 +6,6 @@ namespace CollegWeb.DAL.Interfaces
     public interface IGroupRepository : IBaseRepository<Group>
     {
         Task<BaseResponse<ICollection<Group>>> GetGroupsByUserId(string id);
+        Task<BaseResponse<bool>> CreateGroupUserRelationship(int GroupId, string UserId);
     }
 }

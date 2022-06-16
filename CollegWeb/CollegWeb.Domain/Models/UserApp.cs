@@ -7,7 +7,5 @@ namespace CollegWeb.Domain.Models
 
         [PersonalData]
         public string FullName { get; set; }
-
-        public ICollection<Group> Groups { get; set; }
     }
 }
